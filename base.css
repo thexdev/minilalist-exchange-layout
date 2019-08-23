@@ -1,0 +1,22 @@
+* {
+	font-family: 'Montserrat', sans-serif;
+}
+
+table thead tr, table tbody tr {
+	font-size: 13px;
+}
+
+#buy, #sell {
+	max-height: 828px;
+	overflow-y: auto;
+}
+
+#stock-market {
+	max-height: 892px;
+	overflow-y: auto;
+}
+
+#market-trades {
+	max-height: 400px;
+	overflow-y: auto;
+}
