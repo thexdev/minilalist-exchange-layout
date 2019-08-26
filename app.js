@@ -18,9 +18,9 @@ const buyCoin = {
 					    <label for="buyPrice" class="col-sm-3 col-form-label"><small><strong>Price</strong></small></label>
 					    <div class="col-sm-9">
 					      	<div class="input-group mb-3">
-							  <input type="number" class="form-control text-right" v-model="price">
+							  <input type="number" class="form-control form-control-sm text-right" v-model="price">
 							  <div class="input-group-prepend">
-							    <span class="input-group-text" id="buyPrice">IDR</span>
+							    <span class="input-group-text p-0 px-2" id="buyPrice">IDR</span>
 							  </div>
 							</div>
 					    </div>
@@ -29,9 +29,9 @@ const buyCoin = {
 					    <label for="buyAmount" class="col-sm-3 col-form-label"><small><strong>Amount</strong></small></label>
 					    <div class="col-sm-9">
 					    	<div class="input-group mb-3">
-							  <input type="number" class="form-control text-right" v-model="amount">
+							  <input type="number" class="form-control form-control-sm text-right" v-model="amount">
 							  <div class="input-group-prepend">
-							    <span class="input-group-text" id="buyAmount">BTC</span>
+							    <span class="input-group-text p-0 px-2" id="buyAmount">BTC</span>
 							  </div>
 							</div>
 					    </div>
@@ -41,18 +41,18 @@ const buyCoin = {
 					    <label for="buyTotal" class="col-sm-3 col-form-label"><small><strong>Total</strong></small></label>
 					    <div class="col-sm-9">
 					    	<div class="input-group mb-3">
-							  <input type="number" class="form-control text-right" :value="totalPrice">
+							  <input type="number" class="form-control form-control-sm text-right" :value="totalPrice">
 							  <div class="input-group-prepend">
-							    <span class="input-group-text" id="buyTotal">IDR</span>
+							    <span class="input-group-text p-0 px-2" id="buyTotal">IDR</span>
 							  </div>
 							</div>
 					    </div>
 					</div>
 					<div class="form-group">
 						<div class="border border-warning rounded">
-							<p class="text-center mt-3">
+							<small class="text-center d-block p-2">
 								<a href=""><strong class="text-warning">Log In</strong></a> or <a href=""><strong class="text-warning">Register</strong></a> to trade
-							</p>
+							</small>
 						</div>
 					</div>
 				</form>
@@ -85,9 +85,9 @@ const sellCoin = {
 					    <label for="buyPrice" class="col-sm-3 col-form-label"><small><strong>Price</strong></small></label>
 					    <div class="col-sm-9">
 					      	<div class="input-group mb-3">
-							  <input type="number" class="form-control text-right" v-model="price">
+							  <input type="number" class="form-control form-control-sm text-right" v-model="price">
 							  <div class="input-group-prepend">
-							    <span class="input-group-text" id="buyPrice">IDR</span>
+							    <span class="input-group-text p-0 px-2" id="buyPrice">IDR</span>
 							  </div>
 							</div>
 					    </div>
@@ -96,9 +96,9 @@ const sellCoin = {
 					    <label for="buyAmount" class="col-sm-3 col-form-label"><small><strong>Amount</strong></small></label>
 					    <div class="col-sm-9">
 					    	<div class="input-group mb-3">
-							  <input type="number" class="form-control text-right" v-model="amount">
+							  <input type="number" class="form-control form-control-sm text-right" v-model="amount">
 							  <div class="input-group-prepend">
-							    <span class="input-group-text" id="buyAmount">BTC</span>
+							    <span class="input-group-text p-0 px-2" id="buyAmount">BTC</span>
 							  </div>
 							</div>
 					    </div>
@@ -108,18 +108,18 @@ const sellCoin = {
 					    <label for="buyTotal" class="col-sm-3 col-form-label"><small><strong>Total</strong></small></label>
 					    <div class="col-sm-9">
 					    	<div class="input-group mb-3">
-							  <input type="number" class="form-control text-right" :value="totalPrice">
+							  <input type="number" class="form-control form-control-sm text-right" :value="totalPrice">
 							  <div class="input-group-prepend">
-							    <span class="input-group-text" id="buyTotal">IDR</span>
+							    <span class="input-group-text p-0 px-2" id="buyTotal">IDR</span>
 							  </div>
 							</div>
 					    </div>
 					</div>
 					<div class="form-group">
 						<div class="border border-warning rounded">
-							<p class="text-center mt-3">
+							<small class="text-center d-block p-2">
 								<a href=""><strong class="text-warning">Log In</strong></a> or <a href=""><strong class="text-warning">Register</strong></a> to trade
-							</p>
+							</small>
 						</div>
 					</div>
 				</form>
@@ -227,7 +227,7 @@ const ticker = {
 		</div>
 	`
 }
-
+	
 const tradingChart = {
 	data() {
 		return {
@@ -238,7 +238,7 @@ const tradingChart = {
 		<div class="row mt-4">
 			<div class="col-lg-4">
 				<div class="card">
-					<div class="card-header bg-white p-0">
+					<div class="card-header bg-white p-0 border-0">
 						<ul class="nav nav-tabs border-0" id="myTab" role="tablist">
 							<li class="nav-item">
 							    <a class="nav-link active" id="buy-tab" data-toggle="tab" href="#buy" role="tab" aria-controls="buy" aria-selected="true">Buy</a>
@@ -613,34 +613,69 @@ const tradingChart = {
 	}
 }
 
+const stockMarketControl = {
+	template: `
+		<div id="stock-market-control" class="mb-3 mx-1 row">
+			<div class="col-12">
+				<div class="btn-group mb-2" role="group">
+				  <button type="button" class="btn btn-outline-secondary btn-sm sm-btn-control">QC</button>
+				  <button type="button" class="btn btn-outline-secondary btn-sm sm-btn-control">BTC</button>
+				  <button type="button" class="btn btn-outline-secondary btn-sm sm-btn-control">ALTS</button>
+				</div>
+			</div>
+			<div class="col-6">
+				<input type="search" class="form-control form-control-sm" placeholder="search" />
+			</div>
+			<div class="col-6">
+				<div class="form-check form-check-inline">
+				  <input class="form-check-input" type="radio" name="change" id="sm-change-control" value="change" checked>
+				  <label class="form-check-label" for="sm-change-control">
+				    Change
+				  </label>
+				</div>
+				<div class="form-check form-check-inline">
+				  <input class="form-check-input" type="radio" name="volume" id="sm-volume-control" value="volume">
+				  <label class="form-check-label" for="sm-volume-control">
+				    Volume
+				  </label>
+				</div>
+			</div>
+		</div>
+	`
+}
+
 const stockMarket = {
 	template: `
 		<div class="card">
 			 <div class="card-body p-0">
 				<strong class="mb-3 d-block m-3">Markets</strong>
+				<stock-market-control></stock-market-control>
 				<div class="table-responsive" id="stock-market">
-					<table class="table mb-0">
-				  	<thead>
-				    	<tr>
-					      	<th scope="col">Coin</th>
-					      	<th scope="col">Price</th>
-					      	<th scope="col">Volume</th>
-					      	<th scope="col">Change</th>
-					    </tr>
-				  	</thead>
-				  	<tbody>
-				  		<tr v-for="x in 50">
-				  			<td class="py-0">BTC</td>
-				  			<td class="py-0">20.000</td>
-				  			<td class="py-0">20.000</td>
-				  			<td class="py-0 text-success">0.10%</td>
-				  		</tr>
-				  	</tbody>
-				</table>
+					<table class="table mb-0 table-striped">
+					  	<thead>
+					    	<tr>
+						      	<th scope="col">Coin</th>
+						      	<th scope="col">Price</th>
+						      	<th scope="col">Volume</th>
+						      	<th scope="col">Change</th>
+						    </tr>
+					  	</thead>
+					  	<tbody>
+					  		<tr v-for="x in 50">
+					  			<td class="py-0">BTC</td>
+					  			<td class="py-0">20.000</td>
+					  			<td class="py-0">20.000</td>
+					  			<td class="py-0 text-success">0.10%</td>
+					  		</tr>
+					  	</tbody>
+					</table>
 				</div>
 			</div>
 		</div>
-	`
+	`,
+	components: {
+		'stock-market-control': stockMarketControl
+	}
 }
 
 const marketTrades = {
@@ -649,7 +684,7 @@ const marketTrades = {
 			<div class="card-body p-0">
 				<strong class="mb-3 d-block m-3">Market Trades</strong>
 				<div class="table-responsive" id="market-trades">
-					<table class="table mb-0">
+					<table class="table mb-0 table-striped">
 					  	<thead>
 					    	<tr>
 						      	<th scope="col">Date</th>
