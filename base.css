@@ -2,12 +2,15 @@
 	font-family: 'Montserrat', sans-serif;
 }
 
-table thead tr, table tbody tr {
+table thead tr,
+table tbody tr,
+#stock-market-control:nth-child(2),
+.sm-btn-control {
 	font-size: 13px;
 }
 
 #buy, #sell {
-	max-height: 828px;
+	max-height: 800px;
 	overflow-y: auto;
 }
 
