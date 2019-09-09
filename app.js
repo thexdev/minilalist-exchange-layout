@@ -1,3 +1,9 @@
+Vue.component('akbar', {
+	template: `
+		<p>Hello, akbar!</p>
+	`
+})
+
 // Registered Components
 const buyCoin = {
 	data() {
